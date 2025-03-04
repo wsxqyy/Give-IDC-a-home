@@ -21,7 +21,7 @@
 
 ## 许可证
 
-[项目名称] 使用 Apache-2.0 许可证。有关许可证的详细信息，请参阅 [LICENSE](https://github.com/wsxqyy/Give-IDC-a-home/blob/main/LICENSE) 文件。
+ Give-IDC-a-home 使用 Apache-2.0 许可证。有关许可证的详细信息，请参阅 [LICENSE](https://github.com/wsxqyy/Give-IDC-a-home/blob/main/LICENSE) 文件。
 
 ## 贡献
 
