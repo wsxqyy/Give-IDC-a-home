@@ -1,0 +1,55 @@
+/* 特性部分样式 */
+
+.features-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.feature-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.feature-card h3 {
+    margin: 1rem 0;
+    color: #2d3748;
+    font-size: 1.3rem;
+}
+
+.feature-card p {
+    color: #718096;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.multiply-symbol {
+    color: #000000;
+    font-size: 15px;
+    vertical-align: text-top;
+    margin: 0 15px;
+    transition: transform 0.3s ease;
+}
+
+.multiply-symbol:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}

@@ -1,0 +1,175 @@
+/* Hero 区域 */
+.hero {
+    background: linear-gradient(135deg, #ffffff00, #ffffff00);
+    color: white;
+    text-align: center;
+    padding: 8rem 0;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color:white;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.274);
+    transition: color 0.5s ease, transform 0.3s ease;
+}
+
+.hero h1:hover {
+    transform: scale(1.03); /* 鼠标悬停时放大 */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 3px rgb(255, 255, 255);
+}
+/* 标题容器 */
+.hero-headline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px; /* 控制标题与动态文字的间距 */
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+/* 动态文字容器调整 */
+.dynamic-text-container {
+    width: 320px;
+    min-height: 120px;
+    background: rgba(32, 224, 250, 0.266);
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid rgba(108, 247, 233, 0.632);
+    box-shadow: 0 8px 32px rgba(76, 246, 223, 0.34);
+}
+
+.dynamic-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 1.6;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0);
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    position: relative;
+    padding-left: 30px;
+}
+
+/* 添加渐变装饰线 */
+.dynamic-text::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(to bottom, #ffd700, #1890ff);
+}
+
+/* 按钮样式 */
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    border-radius: 0.3rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 7px rgb(255, 255, 255);
+}
+
+.button-primary {
+    background-color: #1890ff;
+    color: white;
+    border: none;
+}
+
+.button-primary:hover {
+    background-color: #0d6efd;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.button-secondary {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.button-secondary:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.features {
+    padding: var(--section-padding);
+    background: rgba(255, 255, 255, 0);
+}
+
+.features-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.911);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.feature-card h3 {
+    margin: 20px 0;
+    color: var(--dark-bg);
+}
+
+.stats {
+    background: var(--primary-blue);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.stats-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.stat-item h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .hero-headline {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .dynamic-text-container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .dynamic-text {
+        font-size: 1.2rem;
+        padding-left: 20px;
+    }
+}

@@ -1,0 +1,96 @@
+/* 导航栏样式（修改） */
+.main-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: hwb(0 100% 0% / 0.668); /* 半透明白色 */
+    backdrop-filter: blur(10px); /* 毛玻璃效果 */
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.main-nav:hover {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.console-link {
+    color: #1890ff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.console-link:hover {
+    color: #0d6efd;
+}
+
+.nav-menu a {
+    color: #555;
+    text-decoration: none;
+    margin-left: 2rem;
+    font-size: 1rem;
+    transition: color 1s ease, transform 1s ease; /* 修改过渡时间为1s */
+    transform: scale(1); /* 初始状态不放大 */
+}
+
+.nav-menu a:hover {
+    color: #1890ff;
+    transition: color 1s ease, transform 1.3s ease;
+    font-size: 1.1em; /* 增大字体大小 */
+    transform: scale(1.05); /* 放大效果 */
+}
+/* 汉堡包按钮样式 */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #555;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+/* 手机屏幕下的样式 */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+    }
+
+    .nav-menu a {
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+}

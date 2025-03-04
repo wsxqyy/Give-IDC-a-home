@@ -1,0 +1,37 @@
+/* 统计数据样式 */
+.stats {
+    background: linear-gradient(135deg, #ffffff00, #ffffff00);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.stats-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; /* 允许项目换行 */
+    justify-content: space-around;
+    gap: 2rem; /* 设置项目之间的间距 */
+    padding: 0 1rem;
+}
+
+.stat-item {
+    flex: 1 1 200px; /* 设置项目的伸缩性和基础宽度 */
+    min-width: 200px; /* 最小宽度 */
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background: rgba(52, 231, 255, 0.644);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.stat-item h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.stat-item p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}

@@ -1,0 +1,16 @@
+项目根目录
+├── cdn
+│   ├── css           // 存放所有 CSS 文件
+│   └── js            // 存放所有 JavaScript 文件
+├── assets            // 统一静态资源目录
+│   ├── images        // 图片资源（例如 背景6.jpg）
+│   │   └── 背景6.jpg
+│   ├── logo
+|   |   |
+|   |   └──  logo1.png             // logo 图片等资源
+│   └── video         // 视频资源
+│       ├── HeroVideo_Final.mp4          // Hero 视频文件（注意去除多余校验码，可在构建阶段添加版本控制）
+│       ├── v1.mp4
+│       └── website-hero-1920x1080.mp4
+├── 声明.md           // 项目声明文档
+└── index.html        // 项目的首页

@@ -1,0 +1,49 @@
+<svg width="200" height="150" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cubeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2962FF" />  <!-- 深蓝色 -->
+      <stop offset="100%" stop-color="#448AFF" /> <!-- 浅蓝色 -->
+    </linearGradient>
+    <linearGradient id="glowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#75A7FF" stop-opacity="0.8" /> <!-- 浅蓝色，带透明度 -->
+      <stop offset="100%" stop-color="#75A7FF" stop-opacity="0" />  <!-- 浅蓝色，完全透明 -->
+    </linearGradient>
+      <linearGradient id="gearGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#90CAF9" />  <!-- 浅蓝色 -->
+          <stop offset="50%" stop-color="#64B5F6" />
+      <stop offset="100%" stop-color="#90CAF9" />  <!-- 浅蓝色 -->
+    </linearGradient>
+  </defs>
+  <!-- 立方体（服务器） -->
+  <g transform="translate(40, 50)">
+    <path d="M0,0 L80,0 L100,20 L100,80 L20,80 L0,60 Z" fill="url(#cubeGradient)" />
+    <path d="M80,0 L100,20 L20,80 L0,60 Z" fill="url(#cubeGradient)" style="opacity:0.8" /> <!-- 侧面，透明度调整 -->
+    <path d="M100,20 L100,80" stroke="#5C6BC0" stroke-width="2" />  <!-- 内部线条，暗示堆叠 -->
+    <path d="M80,0 L80,60" stroke="#5C6BC0" stroke-width="1.5" />
+    <path d="M20,80 L 20,75" stroke="#5C6BC0" stroke-width="1" />
+    <!-- 发光效果 -->
+      <path d="M0,0 L80,0 L100,20 " fill="url(#glowGradient)" style="opacity:0.6" />
+  </g>
+  <!-- 齿轮 -->
+  <g transform="translate(115, 78)">
+    <path d="M0,0  A15,15 0 0,1 10,-5 L10,-8 A20,20 0 0,0 0,0 Z" fill="url(#gearGradient)"  />
+     <circle cx="0" cy="0" r="4" fill="#64B5F6" />
+      <path d="M0,0  A15,15 0 0,1 -6,12 L-9,15 A20,20 0 0,0 0,0 Z" fill="url(#gearGradient)" />
+  </g>
+  <!-- 云朵 -->
+    <g transform="translate(55, 10)">
+        <path
+                d="M 20,30
+         C 20,15 35,10 50,10
+         C 70,10 80,25 90,25
+         C 100,25 110,15 120,15
+         C 140,15 150,30 130,45
+         C 120,55 100,55 90,50
+         C 80,55 70,60 50,55
+         C 40,60 25,55 20,40 Z"
+                fill="#BBDEFB"
+                stroke="#90CAF9"
+                stroke-width="1"
+        />
+  </g>
+</svg>
