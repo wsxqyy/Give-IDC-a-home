@@ -3,18 +3,23 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # 如果主分支是master，改为master
+      - main 
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: read
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      # - run: npm install && npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # 发布根目录下的所有文件
+          publish_dir: ./  
